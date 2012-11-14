@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7AF000E3-5DCD-467A-AFC0-32530EDD1AAA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RedSnapper</RootNamespace>
+    <AssemblyName>RedSnapper.Workspace</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>Workspace</SccProjectName>
+    <SccLocalPath>2~3476e4b6-7193-4f93-9201-424a4eb2363d</SccLocalPath>
+    <SccAuxPath>http://ansible/VaultService</SccAuxPath>
+    <SccProvider>SourceGear Vault Visual Studio 2005 Client:{1EA47954-8515-402d-82D9-B5C332120A8D}</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CannotPerformActionInEditModeException.cs" />
+    <Compile Include="InputState.cs" />
+    <Compile Include="RuntimeContext.cs" />
+    <Compile Include="Snapper.cs" />
+    <Compile Include="Win32.cs" />
+    <Compile Include="Workspace.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Zone.cs" />
+    <Compile Include="ZoneEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZoneEditForm.Designer.cs">
+      <DependentUpon>ZoneEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZoneFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZoneFrame.Designer.cs">
+      <DependentUpon>ZoneFrame.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Gma.UserActivityMonitor\Gma.UserActivityMonitor.csproj">
+      <Project>{F52AA97E-180A-40ED-8F2B-09080171D6C7}</Project>
+      <Name>Gma.UserActivityMonitor</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ManagedWinapi\ManagedWinapi.csproj">
+      <Project>{FBD3EC1E-47E2-4D2D-81C9-D6506125A09A}</Project>
+      <Name>ManagedWinapi</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ZoneEditForm.resx">
+      <DependentUpon>ZoneEditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZoneFrame.resx">
+      <DependentUpon>ZoneFrame.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

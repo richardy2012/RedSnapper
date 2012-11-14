@@ -1,0 +1,9 @@
+
+Red Snapper 
+  A utility to enable efficient usage of large resolutions by allowing you to snap windows into preset zones.
+
+
+
+Dependencies:
+  Gma.UserActivityMonitor - Original source can be found at: http://globalmousekeyhook.codeplex.com/
+  ManagedWinApi - Original source can be found at http://mwinapi.sourceforge.net/
